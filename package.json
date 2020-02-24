@@ -1,0 +1,31 @@
+{
+  "name": "JS-Guides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon  -e js,hbs ./src/index.js",
+    "test": "jest --runInBand",
+    "@test1": "jest --watch --runInBand ---- NOT working with Docker",
+    "@env-cmd": "This is not working on Docker. See how to make it work",
+    "@dev": "env-cmd -f ./config/dev.env  nodemon src/index.js",
+    "@test2": "env-cmd -f ./config/test.env jest --watch --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2"
+  }
+}
