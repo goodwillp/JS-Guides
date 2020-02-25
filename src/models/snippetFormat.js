@@ -2,8 +2,8 @@ function snippet(topic, chapter, subject, element, title, summary, snippet, test
     this.topic = topic//: 'JS',
     this.chapter = chapter//: 'references',
     this.subject = subject//: 'Built in Objects',
-    this.element = element//: 'Aggregate Error',
-    this.title = title
+    this.element = element
+    this.title = title//: 'Aggregate Error',
     this.summary = summary
     this.snippet = snippet
     this.testCode = testCode
