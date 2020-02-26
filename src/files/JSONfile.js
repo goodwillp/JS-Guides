@@ -29,7 +29,6 @@ const removeSnippet = (title) => {
 //Need to be refactored to pass list of objects
 const listSnippets = () => {
     const snippets = loadSnippets()
-
     // console.log(chalk.blueBright.bold("Your Snippets:"))
     // snippets.forEach(snippet => {
     //     console.log(chalk.green(snippet.title))

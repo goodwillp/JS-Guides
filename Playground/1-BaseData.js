@@ -322,7 +322,7 @@ const smallSnippets = [
   uuid: '18'
 }]
 
-//Use these lines to reate file...comment out after that
+//Use these lines to create file...comment out after that
 // smallSnippets.forEach(snippet => console.log(snippet.title))
 // saveSnippets(smallSnippets)
 

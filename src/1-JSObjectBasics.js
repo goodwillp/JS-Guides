@@ -53,5 +53,11 @@ function bod() {
     //console.log(snippet)
     return [snippet, topics, chapters]
 }
+function allSnippets() {
+    return snippets
+}
 
-module.exports = {bod:  bod}
+module.exports = {
+    bod:  bod,
+    allSnippets: allSnippets
+}
