@@ -1,6 +1,6 @@
 const basicObjectDefinition = require('./1-BaseData')
-const Tree = require('./TreeStructure')
-const extractData = require('./ExtractData')
+const Tree = require('./treeStructure')
+const extractData = require('./extractData')
 
 //Source: https://medium.com/@_jmoller/javascript-data-structures-trees-c961297e6482
 //Assumes a complete Snippet, so 4 levels of depth in any given branch (NO EXCEPTIONS)
