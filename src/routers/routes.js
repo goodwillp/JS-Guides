@@ -3,6 +3,10 @@ const express = require('express')
 const hbs = require('hbs')
 const router = new express.Router()
 
+//Load Tree
+const tree = require('./../tree/buildTree') 
+//console.log(tree)
+
 //Next step to make this dynamic....
 const basicObjectDefinition = require('../1-JSObjectBasics.js')
 const [bod, topics, chapters] = basicObjectDefinition.bod()

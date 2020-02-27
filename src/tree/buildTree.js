@@ -1,4 +1,4 @@
-const basicObjectDefinition = require('./1-BaseData')
+const basicObjectDefinition = require('./loadtSnippets')
 const Tree = require('./treeStructure')
 const extractData = require('./extractData')
 
@@ -60,3 +60,7 @@ const tree = buildTree()
 //         console.log('Value: ' + node.value + ', It\'s an intermediate node');
 //     }
 // });
+
+module.exports = {
+    tree: tree
+}

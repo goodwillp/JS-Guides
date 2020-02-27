@@ -6,6 +6,7 @@ const loadSnippets = () => {
         const dataJSON = dataBuffer.toString()
         return JSON.parse(dataJSON)
     } catch (e) {
+        console.log('Semething went wrong loading file: %s', e)
         return []
     }
 }
