@@ -2,6 +2,12 @@ const hbs = require('hbs')
 const treeBuilder = require('./4-buildTree')
 const TreeStructure = require('./TreeStructure')
 
+
+hbs.registerHelper('treeDecomposer', () => {
+    console.log('Testing the function')
+})
+
+
 var tree = new TreeStructure.Tree()
 tree = treeBuilder.buildTree(tree)
 

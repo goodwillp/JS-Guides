@@ -69,6 +69,17 @@ class Tree {
         return leafsRet.flat();
     }
 
+    _getChildren() {
+        let myChildren = []
+        const self = this;
+        function goThrough(node) {
+            node.children.forEach((child) => {
+                myChildren.push(child)
+            });
+        }
+        goThrough(this._root);
+        return myChildren
+    }
 }
 
 class Node {
