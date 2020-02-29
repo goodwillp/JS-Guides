@@ -69,14 +69,26 @@ class Tree {
         return leafsRet.flat();
     }
 
+
+    _getChildren(){
+        let myChildren = []
+        const self = this;
+        function goThrough(node) {
+            node.children.forEach((child) => {
+                myChildren.push(child)
+            });
+        }
+        goThrough(this._root);
+        return myChildren
+    }
 }
 
 class Node {
     constructor(value, children, isTopic, uuid) {
         this.value = value,
-            this.children = children,
-            this.isTopic = this.isTopic,
-            this.uuid = uuid
+        this.children = children,
+        this.isTopic = isTopic,
+        this.uuid = uuid
     }
 }
 

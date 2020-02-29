@@ -5,7 +5,7 @@ const extractData = require('./extractData')
 //Source: https://medium.com/@_jmoller/javascript-data-structures-trees-c961297e6482
 //Assumes a complete Snippet, so 4 levels of depth in any given branch (NO EXCEPTIONS)
 //Also assumes is a well formed file (NO DUPLICATED TITLES)
-function buildTree() {
+function buildTree(tree1) {
     //Get Data
     const snippets = basicObjectDefinition.getSnippets()
     const topics = extractData.getTopics(snippets)
@@ -62,5 +62,6 @@ const tree = buildTree()
 // });
 
 module.exports = {
-    tree: tree
+    // tree: tree
+    buildTree: buildTree
 }

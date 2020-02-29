@@ -74,9 +74,9 @@ class Tree {
 class Node {
     constructor(value, children, isTopic, uuid) {
         this.value = value,
-            this.children = children,
-            this.isTopic = this.isTopic,
-            this.uuid = uuid
+        this.children = children,
+        this.isTopic = isTopic,
+        this.uuid = uuid
     }
 }
 

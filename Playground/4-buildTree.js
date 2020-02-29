@@ -5,7 +5,7 @@ const extractData = require('./ExtractData')
 //Source: https://medium.com/@_jmoller/javascript-data-structures-trees-c961297e6482
 //Assumes a complete Snippet, so 4 levels of depth in any given branch (NO EXCEPTIONS)
 //Also assumes is a well formed file (NO DUPLICATED TITLES)
-function buildTree() {
+function buildTree(tree) {
     //Get Data
     const snippets = basicObjectDefinition.getSnippets()
     const topics = extractData.getTopics(snippets)
@@ -13,7 +13,7 @@ function buildTree() {
     const subjects = extractData.subjectLists(snippets)
     const titles = extractData.titleLists(snippets)
 
-    const tree = new Tree.Tree();
+    //const tree = new Tree.Tree();
     tree._addNode('Root');
 
     //Level 1
@@ -46,17 +46,26 @@ function buildTree() {
     return tree
 }
 
-const tree = buildTree()
+// const tree = buildTree()
 
-//Uncomment this code to validate tree is well formed
-// tree._traverse((node) => {
-//     if (node.uuid != null) {
-//         console.log('Value: ' + node.value + ', It\'s a Title, with ID: ' + node.uuid);
-//     }
-//     else if (node.isTopic === true || node.value == 'Root') {
-//         console.log('Value: ' + node.value + ', It\'s a Topic');
-//     }
-//     else {
-//         console.log('Value: ' + node.value + ', It\'s an intermediate node');
-//     }
-// });
+// //Uncomment this code to validate tree is well formed
+// function traverseTree(tree)
+// {
+//     tree._traverse((node) => {
+//         if (node.uuid != null) {
+//             console.log('Value: ' + node.value + ', It\'s a Title, with ID: ' + node.uuid);
+//         }
+//         else if (node.isTopic === true || node.value == 'Root') {
+//             console.log('Value: ' + node.value + ', It\'s a Topic');
+//         }
+//         else {
+//             console.log('Value: ' + node.value + ', It\'s an intermediate node');
+//         }
+//     });
+// }
+
+
+module.exports = {
+    // tree: tree
+    buildTree: buildTree
+}

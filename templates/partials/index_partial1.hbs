@@ -1,0 +1,21 @@
+<div class="row">
+    {{#each topic}}
+    <div class="column card">
+        <div class="card">
+            <h3>{{this}}</h3>
+            <ul>
+                <li>testing 1</li>
+                {{#each topic}}
+                <li>chapters</li>
+                <li>{{topic}}</li>
+                {{/each}}
+            </ul>
+            <p>Some text 1</p>
+            <p>Some text</p>
+        </div>
+    </div>
+    {{/each}}
+    {{#each chapters}}
+    <p>{{this}}</p>
+    {{/each}}
+</div>
